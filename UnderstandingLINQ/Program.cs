@@ -38,14 +38,26 @@ namespace UnderstandingLINQ
             //var bmws = myCars.Where(p => p.Make == "BMW" && p.Year == 2010);
             //var orderedCars = myCars.OrderByDescending(p => p.Year);
 
+            /*
+            var orderedCars = myCars.OrderBy(p => p.Year).First(p => p.Make == "BMW");
+            Console.WriteLine("{0} {1}", orderedCars.Year, orderedCars.Model);
+            */
+
+            Console.WriteLine(myCars.TrueForAll(p => p.Year > 2007));
+            //var Cars = myCars.TrueForAll(p => p.Year > 2012);
+            
+
             /*foreach (var car in bmws)
             {
                 Console.WriteLine("{0} {1}", car.Model, car.VIN);
             }*/
+
+            /*
             foreach (var car in orderedCars)
             {
                 Console.WriteLine("{0} {1}", car.Year, car.Model);
             }
+            */
 
             Console.ReadLine();
         }
