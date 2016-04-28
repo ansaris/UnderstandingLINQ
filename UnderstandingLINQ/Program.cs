@@ -28,12 +28,23 @@ namespace UnderstandingLINQ
                        select car;
                        */
 
+            /*
+            var orderedCars = from car in myCars
+                              orderby car.Year descending
+                              select car;
+            */
+
             // LINQ method
             //var bmws = myCars.Where(p => p.Make == "BMW" && p.Year == 2010);
+            //var orderedCars = myCars.OrderByDescending(p => p.Year);
 
-            foreach (var car in bmws)
+            /*foreach (var car in bmws)
             {
                 Console.WriteLine("{0} {1}", car.Model, car.VIN);
+            }*/
+            foreach (var car in orderedCars)
+            {
+                Console.WriteLine("{0} {1}", car.Year, car.Model);
             }
 
             Console.ReadLine();
